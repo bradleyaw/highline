@@ -48,6 +48,8 @@ function smoothScrolling() {
     });
 }
 */
+
+//Portfolio Hover function - runs on JS Load
 $(".p-item").hover(function() {
     $(this).addClass("hover-bg-color");
     $('.p-item-content', this).show();
@@ -56,3 +58,42 @@ $(".p-item").hover(function() {
     $('.p-item-content', this).hide();
   }
 );
+
+//Dynamic Modal code
+$('#Modal').on('show.bs.modal', function (event) {
+    var link = $(event.relatedTarget); // link that triggered the modal
+    var project = link.data('project'); // Extract info from data-* attributes
+    var description = "";
+    var projLink = "";
+    var image = "";
+
+    // Determine which project so it can display appropriate info
+    switch (project) {
+        case "ConTech":
+            description = "Fully custom project, built as a reference guide for people new to the tech industry. Design includes a video background, user authentication, commenting, and dynamic features.";
+            image = '<img class="img-fluid mb-4" src="./assets/img/contech-preview.png" alt="">'
+            projLink = "https://contech-app.herokuapp.com"
+            break;
+        case "Crown Town Crafts":
+            description = "Another Fully custom project, it has a backend database that includes data on all Charlotte area breweries. Design includes a single page application, video background, commenting, and a small admin dashboard.";
+            image = '<img class="img-fluid mb-4" src="./assets/img/ctc-preview.png" alt="">'
+            projLink = "https://crown-town-crafts.herokuapp.com"
+            break;
+        case "Binge Volleyball":
+            description = "Built using Bootstrap, this is a prototype for a personal project which is under further development. This simple project had a strong focus on structure.";
+            image = '<img class="img-fluid mb-4" src="./assets/img/binge-preview.png" alt="">'
+            projLink = "https://bradleyaw.github.io/BingeLayoutBootstrap/"
+            break;
+        default:
+            project = "Not Found"
+            description = "There has been an error";
+            break;
+    }
+    console.log(description);
+
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this);
+    modal.find('.modal-title').text(project);
+    modal.find('.modal-body').html(image + "<br>" + description);
+    modal.find('.view').attr("href", projLink)
+  })
