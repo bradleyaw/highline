@@ -1,0 +1,42 @@
+
+/* Navbar styles */
+.bg-light, .bg-dark, .nav-logo {
+    transition: background-color 300ms linear;
+    border-bottom: none !important;
+}
+
+.bg-dark{
+    /* -webkit-box-shadow: 0 8px 6px -6px #333;
+    -moz-box-shadow: 0 8px 6px -6px #333;
+    box-shadow: 0 8px 6px -6px #333; */
+}
+
+/* End Navbar styles */
+
+.lead-container{
+    height: 50vh;
+
+}
+
+.lead-container img {
+    height: 80%;
+}
+
+.hover-bg-color {
+    background-color: rgba(217, 83, 79, 0.9);
+}
+
+.fa-search-plus, .p-item-content {
+    flex-direction: column;
+
+    -ms-flex-pack: center;
+    -ms-flex-align:center;
+}
+
+.anchor:before { 
+    display: block; 
+    content: " "; 
+    margin-top: -100px;
+    height: 100px;
+    visibility: hidden; 
+  }
