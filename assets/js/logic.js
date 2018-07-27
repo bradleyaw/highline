@@ -11,7 +11,7 @@ $(function() {
         } else {
             navbar.removeClass('bg-dark navbar-dark').addClass("bg-light navbar-light");
         }
-        if (scroll >= 350) {
+        if (scroll >= 300) {
             logo.attr('src', src2);
         } else {
             logo.attr('src', src1);
