@@ -1,3 +1,9 @@
+// Code written or adapted by Alex Bradley for High Line
+
+/////////////////////////
+//Navbar change on scroll
+/////////////////////////
+
 $(function() {
     var navbar = $(".navbar-fixed-top");
     var logo = $(".nav-logo");
@@ -18,48 +24,45 @@ $(function() {
         }
     });
 });
-$( document ).ready(function() {
-    $('.p-item-content', this).hide();
-});
 
 
 
-/* smoothScrolling();
+//////////////////////////
+// Animate Pricing Section
+//////////////////////////
 
+var $animation_elements = $('.animation-element');
+var $window = $(window);
 
-function smoothScrolling() {
-    //Adding site specific JS for desktop experience
-    // Add smooth scrolling to all links
-    $("a").on('click', function (event) {
-
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash 
-            var hash = this.hash;
-            // Using jQuery's animate() method to add smooth page scroll
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 500);
-        };
-    });
+function check_if_in_view() {
+  var window_height = $window.height();
+  var window_top_position = $window.scrollTop();
+  var window_bottom_position = (window_top_position + window_height);
+ 
+  $.each($animation_elements, function() {
+    var $element = $(this);
+    var element_height = $element.outerHeight();
+    var element_top_position = $element.offset().top;
+    var element_bottom_position = (element_top_position + element_height);
+ 
+    //check to see if this current container is within viewport
+    if ((element_bottom_position >= window_top_position) &&
+        (element_top_position <= window_bottom_position)) {
+      $element.addClass('in-view');
+    } else {
+      $element.removeClass('in-view');
+    }
+  });
 }
-*/
 
-//Portfolio Hover function - runs on JS Load
-$(".p-item").hover(function() {
-    $(this).addClass("hover-bg-color");
-    $('.p-item-content', this).show();
-  }, function() {
-    $(this).removeClass("hover-bg-color");
-    $('.p-item-content', this).hide();
-  }
-);
+$window.on('scroll resize', check_if_in_view);
+$window.trigger('scroll');
 
+
+////////////////////
 //Dynamic Modal code
+////////////////////
+
 $('#Modal').on('show.bs.modal', function (event) {
     var link = $(event.relatedTarget); // link that triggered the modal
     var project = link.data('project'); // Extract info from data-* attributes
@@ -96,4 +99,29 @@ $('#Modal').on('show.bs.modal', function (event) {
     modal.find('.modal-title').text(project);
     modal.find('.modal-body').html(image + "<br>" + description);
     modal.find('.view').attr("href", projLink)
-  })
+})
+
+/*
+function smoothScrolling() {
+    //Adding site specific JS for desktop experience
+    // Add smooth scrolling to all links
+    $("a").on('click', function (event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash 
+            var hash = this.hash;
+            // Using jQuery's animate() method to add smooth page scroll
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 500);
+        };
+    });
+}
+
+smoothScrolling();
+*/

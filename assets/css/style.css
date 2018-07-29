@@ -1,5 +1,6 @@
 
 /* Navbar styles */
+
 .bg-light, .bg-dark, .nav-logo {
     transition: background-color 300ms linear;
     border-bottom: none !important;
@@ -26,13 +27,50 @@
     background-color: rgba(217, 83, 79, 0.9);
 }
 
-.fa-search-plus, .p-item-content {
-    flex-direction: column;
-
-    -ms-flex-pack: center;
-    -ms-flex-align:center;
+.overlay1 {
+    background: url("../img/contech-preview.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 250px;
 }
 
+.overlay2 {
+    background: url("../img/ctc-preview.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 250px;
+
+}
+
+.overlay3 {
+    background: url("../img/binge-preview.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 250px;
+}
+
+.adjust {
+    left: 0px;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    opacity: 0;
+    background-color: rgba(217, 83, 79, 0.9);
+}
+
+.adjust:hover {
+    opacity: 1;
+}
+
+.fa-search-plus {
+    position: relative;
+    top:40%;
+}
+
+/* Page Anchor Vertical adjust (Adjusted for Nav) */
 .anchor:before { 
     display: block; 
     content: " "; 
@@ -40,3 +78,80 @@
     height: 100px;
     visibility: hidden; 
   }
+
+
+/* ************* */
+/* Animate icons */
+/* ************* */
+
+i:hover {
+    animation: shake 0.5s; 
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+  
+  /* *********************** */
+  /* Pricing Slide Animation */
+  /* *********************** */
+
+.animation-element.slide-left:nth-of-type(1) {
+    opacity: 0;
+    -moz-transition: all 750ms linear;
+    -webkit-transition: all 750ms linear;
+    -o-transition: all 750ms linear;
+    transition: all 750ms linear;
+    -moz-transform: translate3d(-100px, 0px, 0px);
+    -webkit-transform: translate3d(-100px, 0px, 0px);
+    -o-transform: translate(-100px, 0px);
+    -ms-transform: translate(-100px, 0px);
+    transform: translate3d(-100px, 0px, 0px);
+}
+
+.animation-element.slide-left:nth-of-type(2) {
+    opacity: 0;
+    -moz-transition: all 750ms linear;
+    -webkit-transition: all 750ms linear;
+    -o-transition: all 750ms linear;
+    transition: all 750ms linear;
+    -moz-transform: translate3d(-100px, 0px, 0px);
+    -webkit-transform: translate3d(-100px, 0px, 0px);
+    -o-transform: translate(-100px, 0px);
+    -ms-transform: translate(-100px, 0px);
+    transform: translate3d(-100px, 0px, 0px);
+}
+
+.animation-element.slide-left:nth-of-type(3) {
+    opacity: 0;
+    -moz-transition: all 750ms linear;
+    -webkit-transition: all 750ms linear;
+    -o-transition: all 750ms linear;
+    transition: all 750ms linear;
+    -moz-transform: translate3d(-100px, 0px, 0px);
+    -webkit-transform: translate3d(-100px, 0px, 0px);
+    -o-transform: translate(-100px, 0px);
+    -ms-transform: translate(-100px, 0px);
+    transform: translate3d(-100px, 0px, 0px);
+}
+  
+.animation-element.slide-left.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+}
+
+
