@@ -25,6 +25,15 @@ $(function() {
     });
 });
 
+/////////////////////////
+//Navbar collapse on mobile click
+/////////////////////////
+$(document).on('click','.show',function(e) {
+    if( $(e.target).is('a:not(".dropdown-toggle")') ) {
+        $(this).collapse('hide');
+    }
+});
+
 
 
 //////////////////////////
