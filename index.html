@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Charlotte, NC website and application development. Specializing in custom and bootstrap framework responsive design."/>
+    <meta name="description" content="Charlotte, NC website and application development. Specializing in custom and bootstrap framework responsive design."
+    />
     <title>High Line Web Services</title>
 
     <!-- Bootstrap CSS file -->
@@ -15,6 +16,9 @@
     <!-- FontAwesome CSS file -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
+
+    <!-- Remove the need for a favicon -->
+    <link rel="shortcut icon" href="#" />
 
     <!-- My CSS files -->
     <link rel="stylesheet" href="./assets/css/bootstrap.css">
@@ -160,7 +164,7 @@
 
     <section class="jumbotron jumbotron-fluid bg-dark">
         <div class="container-fluid">
-                <h2 id="portfolio" class="mb-5 text-center text-white anchor">Portfolio</h2>
+            <h2 id="portfolio" class="mb-5 text-center text-white anchor">Portfolio</h2>
             <div class="row justify-content-center">
                 <div class="col-10 col-md-5 col-lg-3 overlay1 m-4">
                     <a class="" data-toggle="modal" data-target="#Modal" data-project="ConTech">
@@ -186,78 +190,78 @@
             </div>
         </div>
     </section>
-        <section class="jumbotron jumbotron-fluid bg-light mb-0 py-0">
-            <div class="container">
-                <h2 id="contact" class="col-12 mt-5 text-center anchor">Contact</h2>
-                <div class="row justify-content-center py-5">
-                    <form class="col col-12 col-md-10 col-lg-8 col-xl-6" action="https://formspree.io/bradleyaw@gmail.com" method="POST">
-                        <fieldset>
-                            <div class="row">
-                                <div class="col col-12 col-md-6 mb-4">
-                                    <label for="InputName">Name</label>
-                                    <input type="text" name="name" class="form-control py-2" id="InputName" placeholder="Ex. Jane Doe">
-                                </div>
-                                <div class="col col-12 col-md-6 mb-4">
-                                    <label for="Phone">Phone</label>
-                                    <input type="phone" name="phone" class="form-control py-2" id="Phone" placeholder="Ex. (704) 555-5555">
-                                </div>
+    <section class="jumbotron jumbotron-fluid bg-light mb-0 py-0">
+        <div class="container">
+            <h2 id="contact" class="col-12 mt-5 text-center anchor">Contact</h2>
+            <div class="row justify-content-center py-5">
+                <form class="col col-12 col-md-10 col-lg-8 col-xl-6" action="https://formspree.io/bradleyaw@gmail.com" method="POST">
+                    <fieldset>
+                        <div class="row">
+                            <div class="col col-12 col-md-6 mb-4">
+                                <label for="InputName">Name</label>
+                                <input type="text" name="name" class="form-control py-2" id="InputName" placeholder="Ex. Jane Doe">
                             </div>
-                            <div class="row">
-                                <div class="col col-12 col-md-6 mb-4">
-                                    <label for="InputEmail">Email address</label>
-                                    <input type="email" name="_replyto" class="form-control py-2" id="InputEmail" aria-describedby="emailHelp" placeholder="Ex. example@gmail.com">
-                                </div>
-                                <div class="col col-12 col-md-6 mb-4">
-                                    <label for="Select">Reason for contact</label>
-                                    <select name="reason" class="form-control py-1" id="Select">
-                                        <option>New Web Project</option>
-                                        <option>Current Website Edits</option>
-                                        <option>Other</option>
-                                    </select>
-                                </div>
+                            <div class="col col-12 col-md-6 mb-4">
+                                <label for="Phone">Phone</label>
+                                <input type="phone" name="phone" class="form-control py-2" id="Phone" placeholder="Ex. (704) 555-5555">
                             </div>
-                            <div class="form-group">
-                                <label for="Textarea">Message</label>
-                                <textarea name="message" class="form-control" id="Textarea" rows="3"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col col-12 col-md-6 mb-4">
+                                <label for="InputEmail">Email address</label>
+                                <input type="email" name="_replyto" class="form-control py-2" id="InputEmail" aria-describedby="emailHelp" placeholder="Ex. example@gmail.com">
                             </div>
-                            <button type="submit" value="Send" class="btn btn-dark">Submit</button>
-                        </fieldset>
-                    </form>
+                            <div class="col col-12 col-md-6 mb-4">
+                                <label for="Select">Reason for contact</label>
+                                <select name="reason" class="form-control py-1" id="Select">
+                                    <option>New Web Project</option>
+                                    <option>Current Website Edits</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Textarea">Message</label>
+                            <textarea name="message" class="form-control" id="Textarea" rows="3"></textarea>
+                        </div>
+                        <button type="submit" value="Send" class="btn btn-dark">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+    <aside class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel">Project Name</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a href="http://google.com" target="_blank" type="button" class="btn btn-dark view">View Project</a>
                 </div>
             </div>
-        </section>
-        <aside class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="ModalLabel">Project Name</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
+        </div>
+    </aside>
+    <footer class="navbar navbar-dark bg-danger  lead">
+        <p class="text-center text-white justify-content-center w-100 mb-0">© 2018 High Line Web Services</p>
+    </footer>
 
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <a href="http://google.com" target="_blank" type="button" class="btn btn-dark view">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </aside>
-        <footer class="navbar navbar-dark bg-danger  lead">
-            <p class="text-center text-white justify-content-center w-100 mb-0">© 2018 High Line Web Services</p>
-        </footer>
-
-        <!-- Bootstrap JS files -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-        <!-- My JS file -->
-        <script src="./assets/js/logic.js"></script>
+    <!-- Bootstrap JS files -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- My JS file -->
+    <script src="./assets/js/logic.js"></script>
 </body>
 
 </html>
